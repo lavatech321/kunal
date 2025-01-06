@@ -1,0 +1,39 @@
+version: '3'
+networks:
+  ap_net:
+    driver: bridge
+    ipam: 
+      driver: default
+      config:
+        - subnet: 110.120.130.0/24
+
+
+services:
+
+  lavatech1:
+    image: centos
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+    networks:
+      ap_net:
+        ipv4_address: 110.120.130.100
+
+
+  lavatech2:
+    image: fedora
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+
+  lavatech3:
+    image: fedora
+    stdin_open: true
+    tty: true
+    command: /bin/bash
+  
+ lavatech4:
+    image: fedora
+    stdin_open: true
+    tty: true
+    command: /bin/bash
