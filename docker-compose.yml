@@ -32,7 +32,7 @@ services:
     tty: true
     command: /bin/bash
   
- lavatech4:
+  lavatech4:
     image: fedora
     stdin_open: true
     tty: true
